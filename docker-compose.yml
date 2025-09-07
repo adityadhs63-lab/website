@@ -1,26 +1,27 @@
-version: '3.8'
+version: "3.8"
 services:
   movies:
-    image: rahamshaik/9ammovies:latest
+    image: gudduadi/paytmtrain:latest
     ports:
-      - "81:80"
+      - "8025:80"
     deploy:
       replicas: 3
-  train:
-    image: rahamshaik/9amtrain:latest
+  movie:
+    image: gudduadi/paytmmovie:latest
     ports:
-      - "82:80"
+      - "8026:80"
     deploy:
       replicas: 3
   recharge:
-    image: rahamshaik/9amrecharge:latest
+    image: gudduadi/paytmrecharge:latest
     ports:
-      - "83:80"
+      - "8027:80"
     deploy:
       replicas: 3
   dth:
-    image: rahamshaik/9amdth:latest
+    image: gudduadi/paytmdth:latest
     ports:
-      - "84:80"
+      - "8028:80"
     deploy:
       replicas: 3
+
